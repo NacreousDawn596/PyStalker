@@ -7,8 +7,7 @@ except IndexError:
 	OPTIONS:
 			python3 main.py username''')
 	exit()
-urls = open('data.txt', 'r').read().splitlines()
-for url in urls:
+for url in open('data.txt', 'r').read().splitlines():
 	if get(f'{url}{name}').status_code == 200:
 		print(f'FOUND: {url}{name}')
 	else:
