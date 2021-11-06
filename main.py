@@ -11,4 +11,5 @@ for url in open('data.txt', 'r').read().splitlines():
 	if get(f'{url}{name}').status_code == 200:
 		print(f'FOUND: {url}{name}')
 	else:
+		#print(f'unfounded: {url}{name}') in case to make sure that the script is working. 
 		pass
